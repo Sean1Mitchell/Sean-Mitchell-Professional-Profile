@@ -53,6 +53,7 @@ header {
 .grid-layout {
     display: grid;
     grid-template-columns: 1fr;
+    margin-bottom: 40px;
 }
 
 .content-box {
@@ -67,15 +68,32 @@ header {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 300px;
     position: relative;
-}
+    border-radius: 10px 10px 0 0;
+    z-index: 2;
 
-.intro-background {
     grid-column: 1 / -1;
     grid-row: 1;
 
     background-image:url("background.jpg");
     background-size:cover;
     background-position:center;
+}
+
+.aboutme, .education {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px;
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid black;
+}
+
+.experience {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px;
+    position: relative;
+    border-radius: 0 0 10px 10px;
 }
 
 .intro-text{
@@ -96,19 +114,32 @@ header {
     align-self:end;
     justify-self:center;
 
-    transform:translateY(10px);
-}
-
-.aboutme {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 300px;
-    position: relative;
+    transform:translateY(30px);
 }
 
 .aboutme-text {
     grid-column:1;
     grid-row:1;
-    align-self:center;
     color:black;
+    padding: 70px;
+    border-right: 1px solid black;
 }
+
+.aboutme-text-two {
+    grid-column:2;
+    grid-row:1;
+    color:black;
+    padding: 70px;
+}
+
+.aboutme-text h3, .aboutme-text-two h3 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.skillpoints {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+

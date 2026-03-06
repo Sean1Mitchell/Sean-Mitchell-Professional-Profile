@@ -98,3 +98,17 @@ header {
 
     transform:translateY(10px);
 }
+
+.aboutme {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px;
+    position: relative;
+}
+
+.aboutme-text {
+    grid-column:1;
+    grid-row:1;
+    align-self:center;
+    color:black;
+}
